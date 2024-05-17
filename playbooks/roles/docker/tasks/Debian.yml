@@ -1,6 +1,7 @@
 tasks:
   - name: Install Docker on Debian
     become: true
+    when: ansible_facts['distribution'] == 'Debian'
     block:
       - name: Update and upgrade all packages to the latest version
         ansible.builtin.apt:
