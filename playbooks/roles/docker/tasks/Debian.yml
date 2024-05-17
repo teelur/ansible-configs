@@ -12,7 +12,7 @@
         upgrade: dist
         cache_valid_time: 3600
 
-    - name: Install required packages
+    - name: Install required dependencies
       ansible.builtin.apt:
         pkg:
           - apt-transport-https
@@ -57,6 +57,12 @@
         - containerd.io
         - docker-buildx-plugin
         - docker-compose-plugin
+
+    - name: Check docker is active
+      service:
+        name: docker
+        state: started
+        enabled: yes
 
     - name: Add Docker group
       ansible.builtin.group:
