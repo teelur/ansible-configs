@@ -1,5 +1,5 @@
 ---
 - name: Configure docker servers
-  hosts: webservers
+  hosts: docker
   roles:
     - role: docker
