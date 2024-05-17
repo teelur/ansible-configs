@@ -1,0 +1,5 @@
+---
+- name: Configure linux servers
+  hosts: linux
+  roles:
+    - role: linux
