@@ -37,7 +37,7 @@ tasks:
       - name: Add Docker repository
         ansible.builtin.apt_repository:
           repo: >-
-            deb [arch={{ arch_mapping[ansible_architecture] | default(ansible_architecture) }}
+            deb [arch={{ docker_arch_mapping[ansible_architecture] | default(ansible_architecture) }}
             signed-by=/etc/apt/keyrings/docker.gpg]
             https://download.docker.com/linux/ubuntu {{ ansible_lsb.codename }} stable
           filename: docker
