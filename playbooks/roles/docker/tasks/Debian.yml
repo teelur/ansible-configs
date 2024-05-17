@@ -1,6 +1,6 @@
 - name: Install Docker on Debian
   become: true
-  when: ansible_facts['distribution'] == 'Debian'
+  when: ansible_facts['distribution']|lower == 'debian'
   block:
     - name: Update and upgrade all packages to the latest version
       ansible.builtin.apt:
