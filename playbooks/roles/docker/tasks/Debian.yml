@@ -1,4 +1,4 @@
-- name: Install Docker on Ubuntu
+- name: Install Docker on Debian
   become: true
   vars:
     arch_mapping: # Map ansible architecture {{ ansible_architecture }} names to Docker's architecture names
@@ -62,7 +62,7 @@
       service:
         name: docker
         state: started
-        enabled: yes
+        enabled: true
 
     - name: Add Docker group
       ansible.builtin.group:
