@@ -1,7 +1,4 @@
 ---
-- src: https://github.com/geerlingguy/ansible-role-docker
-  version: master
-- src: https://github.com/geerlingguy/ansible-role-pip
-  version: master
-- src: https://github.com/geerlingguy/ansible-role-git
-  version: master
+- name: geerlingguy.pip
+- name: geerlingguy.docker
+- name: geerlingguy.git
