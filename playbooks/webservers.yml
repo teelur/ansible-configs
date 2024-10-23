@@ -1,6 +1,11 @@
 ---
 - name: Configure webservers
   hosts: webservers
+  vars:
+    pip_install_packages:
+      - name: docker
+
   roles:
     - linux
-    - docker
+    - geerlingguy.pip
+    - geerlingguy.docker
