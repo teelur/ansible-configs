@@ -4,4 +4,4 @@
 
   roles:
     - linux
-    - geerlingguy.docker
+    - { role: geerlingguy.docker, become: yes }
