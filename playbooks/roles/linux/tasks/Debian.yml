@@ -12,3 +12,4 @@
       - tree
     state: latest
     update_cache: true
+  become: true
