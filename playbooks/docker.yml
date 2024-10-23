@@ -1,5 +1,11 @@
 ---
 - name: Configure docker servers
   hosts: docker
+
+  vars:
+    pip_install_packages:
+      - name: docker
+
   roles:
-    - role: docker
+    - geerlingguy.pip
+    - geerlingguy.docker

@@ -1,2 +1,0 @@
-- name: Handle OS specific installation
-  ansible.builtin.include_tasks: "{{ ansible_os_family }}.yml"
