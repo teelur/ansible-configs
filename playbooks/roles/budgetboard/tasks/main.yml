@@ -2,3 +2,9 @@
   ansible.builtin.git:
     repo: https://github.com/tshea113/budget-board
     dest: /home/git/budget-board
+    environment:
+- name: Deploy BudgetBoard
+  community.docker.docker_compose_v2:
+    build: always
+    project_name: budgetboard
+    project_src: /home/git/budget-board
