@@ -7,3 +7,4 @@
     build: always
     project_name: budgetboard
     project_src: /home/git/budget-board
+  become: yes
