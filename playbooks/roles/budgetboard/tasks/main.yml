@@ -1,0 +1,4 @@
+- name: Clone BudgetBoard
+  ansible.builtin.git:
+    repo: https://github.com/tshea113/budget-board
+    dest: /home/git
