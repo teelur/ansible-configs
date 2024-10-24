@@ -3,5 +3,6 @@
   hosts: budgetboard
 
   roles:
-    - webservers
+    - linux
+    - { role: geerlingguy.docker, become: yes }
     - budgetboard
