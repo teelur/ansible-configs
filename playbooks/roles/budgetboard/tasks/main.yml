@@ -2,6 +2,11 @@
   ansible.builtin.git:
     repo: https://github.com/tshea113/budget-board
     dest: /home/git/budget-board
+
+# TODO: Should be able to populate the docker compose override somehow
+
+# TODO: Should be able to choose the nginx config
+
 - name: Deploy BudgetBoard
   community.docker.docker_compose_v2:
     build: always
